@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prayer Timings</title>
+    <style>
+      .navbar {
+        background-color: #000;
+        color: #fff;
+        height: 50px;
+        text-align: center;
+        justify-content: center;
+        line-height: 50px;
+      }
+      /* CSS for city input container */
+      #container {
+        margin: 20px auto;
+        max-width: 400px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+      #container label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      #container input[type="text"] {
+        width: calc(100% - 80px); /* Adjust input width */
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      #container button {
+        padding: 8px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 5px;
+      }
+      #container button:hover {
+        background-color: #0056b3;
+      }
+
+      /* CSS for response container */
+      #dataContainer,
+      #countdownContainer {
+        margin: 20px auto;
+        max-width: 600px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+      }
+      #dataContainer p,
+      #countdownContainer p {
+        margin: 0;
+        padding: 5px 0;
+      }
+      #dataContainer h3,
+      #countdownContainer h3 {
+        margin-top: 0;
+      }
+    </style>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="navbar">Al-Adhan API</div>
+    <div id="container">
+      <label for="cityInput">Enter the city:</label>
+      <input type="text" id="cityInput" name="cityInput" />
+      <button onclick="submitCity()">Submit</button>
+    </div>
+
+    <div id="dataContainer">
+      <!-- Data will be displayed here -->
+    </div>
+
+    <div id="countdownContainer">
+      <!-- Countdown will be displayed here -->
+    </div>
+  </body>
+</html>
